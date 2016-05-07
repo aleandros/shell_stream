@@ -1,10 +1,28 @@
 # ShellStream
 
-**TODO: Add description**
+ShellStream is a small library that exposes a single function (and sigil)
+for running shell commands and returning a stream which generates an 
+element for every line of the command output.
+
+## Usage
+
+If you do not need the sigil, simply run:
+
+```
+ShellStream.shell("seq 10") |> Stream.map(&String.to_integer/1) |> Enum.to_list
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+The sigil syntax simply wraps the `shell` function. Only the extra
+import is required.
+
+```
+import ShellStream
+~x(seq 10) |> Stream.map(&String.to_integer/1) |> Enum.to_list
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
 
 ## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
   1. Add shell_stream to your list of dependencies in `mix.exs`:
 
