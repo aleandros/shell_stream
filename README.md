@@ -1,5 +1,7 @@
 # ShellStream
 
+[![Build Status](https://travis-ci.org/aleandros/shell_stream.svg?branch=master)](https://travis-ci.org/aleandros/shell_stream)
+
 ShellStream is a small library that exposes a single function (and sigil)
 for running shell commands and returning a stream which generates an 
 element for every line of the command output.
