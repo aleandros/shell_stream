@@ -8,7 +8,7 @@ element for every line of the command output.
 
 If you do not need the sigil, simply run:
 
-```
+```elixir
 ShellStream.shell("seq 10") |> Stream.map(&String.to_integer/1) |> Enum.to_list
 # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
@@ -16,7 +16,7 @@ ShellStream.shell("seq 10") |> Stream.map(&String.to_integer/1) |> Enum.to_list
 The sigil syntax simply wraps the `shell` function. Only the extra
 import is required.
 
-```
+```elixir
 import ShellStream
 ~x(seq 10) |> Stream.map(&String.to_integer/1) |> Enum.to_list
 # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
