@@ -1,7 +1,7 @@
 defmodule PortHandlerTest do
   use ExUnit.Case
   alias ShellStream.PortHandler
-  
+
   test "run sends single line command as a binary" do
     PortHandler.run("echo 'hello world'", self)
     receive do

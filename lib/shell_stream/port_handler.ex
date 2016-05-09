@@ -1,5 +1,5 @@
 defmodule ShellStream.PortHandler do
-  @docmodule """
+  @moduledoc """
   Wrap the logic of comunicating
   with a port, including boilerplate
   configuration (assumptions are made such as
